@@ -13,7 +13,7 @@ app.use(expressLayouts);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home',layout:'index' });
+    res.render('home', { title: 'Home',layout:'home' });
 })
 
 app.listen(port, () => {
