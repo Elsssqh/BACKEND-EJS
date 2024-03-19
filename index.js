@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
 const expressLayouts = require('express-ejs-layouts');
 
 //ejs
@@ -10,10 +9,25 @@ app.set('view engine', 'ejs');
 // layout
 app.use(expressLayouts);
 
+//static express
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.render('home', { title: 'Home',layout:'home' });
+})
+
+app.get('/', (req, res) => {
+    res.render('About', { title: 'About',layout:'home' });
+})
+app.get('/ourBooks', (req, res) => {
+    res.render('ourBooks', { title: 'ourBooks',layout:'ourBooks' });
+})
+
+app.get('/search', (req, res) => {
+    res.render('search', { title: 'search',layout:'search' });
+})
+app.get('/trolley', (req, res) => {
+    res.render('trolley', { title: 'trolley',layout:'trolley' });
 })
 
 app.listen(port, () => {

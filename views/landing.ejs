@@ -1,15 +1,6 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PagePetal Store</title>
-    <link rel="icon" href="asset/PagePetal.png">
 
-    <link rel="stylesheet" type="text/css" href="landing.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
+<%- include('layouts/header.ejs') %>
 
 <body>
 
@@ -30,14 +21,8 @@
      
     </section>
 
-    <footer>
-        <div class="info-column">
-            <div class="info-container">
-                <center><span2><b>© Created by : PagePetal</b></span2></center>
-                <center><span2><b>© Designed by : PagePetal</b></span2></center>
-            </div>
-            </div>
-    </footer>
+  
+    <%- include('layouts/footer.ejs') %>
 
     </div>
 
@@ -91,4 +76,5 @@
 </script>
 
 </body>
+<%- include('layouts/footer.ejs') %>
 </html>
