@@ -12,10 +12,9 @@ app.use(expressLayouts);
 //static express
 app.use(express.static('public'));
 
-app.get('/home', (req, res) => {
-    res.render('home')
-});
-
+app.get('/', (req, res) => {
+    res.render('home', { title: 'Home',layout:'home' });
+})
 app.get('/about', (req, res) => {
     res.render('About', { title: 'About',layout:'home' });
 })
