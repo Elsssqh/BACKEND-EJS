@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="bookApp">
-    <%- include('views/mainlayouts.ejs') %>
+  <%- include('layouts/header.ejs') %>
 <head>
     <!--header-->
     <link rel="stylesheet" type="text/css" href="trolley.css">
@@ -10,6 +10,7 @@
     
     <header class="sticky">
     <!--nav-->
+    <%- include('layouts/nav.ejs') %>
     </header>
 
     <section class="items" id="items">

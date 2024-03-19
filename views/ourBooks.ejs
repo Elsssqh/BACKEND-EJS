@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="bookApp">
-    <%- include('views/mainlayouts.ejs') %>
-    <link rel="stylesheet" type="text/css" href="ourBooks.css">
-<header class="sticky">
+<head>
     
-</header>
+    <%- include('layouts/header.ejs') %>
+    <link rel="stylesheet" type="text/css" href="ourBooks.css">
+    <!-- Add any additional header elements here -->
+</head>
+<body>
+    <header class="sticky">
+        <!-- Header content goes here -->
+        <%- include('layouts/nav.ejs') %>
+    </header>
 
-<section class="buku" id="buku" ng-controller="BookController">
-    <div id="bookshelf" class="animated-bookshelf">
-        <div ng-repeat="book in books" class="book" ng-click="showBookDetails(book)">
-            <img ng-src="{{book.thumbnail}}" alt="{{book.title}} Cover">
-            <h3>{{book.title}}</h3>
-        </div>
-    </div>
-
-    <div id="overlay" class="overlay" ng-show="selectedBook">
-        <div class="overlay-content">
-            <img ng-src="{{selectedBook.thumbnail}}" alt="{{selectedBook.title}} Cover">
-            <h3>{{selectedBook.title}}</h3>
-            <p>{{selectedBook.description}}</p>
-
-            <div class="add-to-trolley">
-                <p>Price: {{selectedBook.price}}</p>
-                <button ng-click="addToTrolley(selectedBook)">Add to Trolley</button>
+    <section class="buku" id="buku" ng-controller="BookController">
+        <div id="bookshelf" class="animated-bookshelf">
+            <div ng-repeat="book in books" class="book" ng-click="showBookDetails(book)">
+                <img ng-src="{{book.thumbnail}}" alt="{{book.title}} Cover">
+                <h3>{{book.title}}</h3>
             </div>
-
-            <button ng-click="hideBookDetails()">Close</button>
         </div>
-    </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="BookAPI.js"></script>
+        <div id="overlay" class="overlay" ng-show="selectedBook">
+            <div class="overlay-content">
+                <img ng-src="{{selectedBook.thumbnail}}" alt="{{selectedBook.title}} Cover">
+                <h3>{{selectedBook.title}}</h3>
+                <p>{{selectedBook.description}}</p>
 
-<script src="index.js"></script>
-</section>
+                <div class="add-to-trolley">
+                    <p>Price: {{selectedBook.price}}</p>
+                    <button ng-click="addToTrolley(selectedBook)">Add to Trolley</button>
+                </div>
 
+                <button ng-click="hideBookDetails()">Close</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="BookAPI.js"></script>
+    <script src="index.js"></script>
+    <%- include('layouts/footer.ejs') %>
+    <!-- Add any additional scripts here -->
 </body>
 </html>

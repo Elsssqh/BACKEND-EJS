@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('About', { title: 'About',layout:'home' });
 })
+
 app.get('/ourBooks', (req, res) => {
     res.render('ourBooks', { title: 'ourBooks',layout:'ourBooks' });
 })
