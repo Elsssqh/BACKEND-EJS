@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
     res.render('landing', { title: 'Landing', layout: 'landing' });
 });
 
+app.get('/landing', (req, res) => {
+    res.render('landing', { title: 'Landing', layout: 'landing' });
+});
 // Other routes
 app.get('/home', (req, res) => {
     res.render('home', { title: 'Home', layout: 'home' });
