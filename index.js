@@ -12,7 +12,11 @@ app.use(expressLayouts);
 //static express
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+app.get('/landing', (req, res) => {
+    res.render('landing', { title: 'landing',layout:'landing' });
+})
+
+app.get('/home', (req, res) => {
     res.render('home', { title: 'Home',layout:'home' });
 })
 app.get('/about', (req, res) => {
