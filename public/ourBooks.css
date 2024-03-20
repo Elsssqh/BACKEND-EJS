@@ -23,7 +23,7 @@
     --normal-font-size: .938rem;
 }
 
-header.sticky {
+header {
     position: flex;
     width: 100%;
     height: 60px;
@@ -36,8 +36,6 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
     background-color: cover;
-    width: auto;
-    height: 900px;
 }
 
 #bookshelf {
@@ -142,7 +140,7 @@ body {
 }
 
 section.buku {
-    height: 170vh;
+    /* height: 170vh; */
     display: flex;
     justify-content: center;
     align-items: center;

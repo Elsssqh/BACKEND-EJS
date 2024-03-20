@@ -21,7 +21,7 @@
     --normal-font-size: .938rem;
 }
 
-header.sticky {
+header {
     position: flex;
     width: 100%;
     height: 60px;
