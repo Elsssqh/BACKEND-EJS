@@ -43,7 +43,7 @@ body {
 h1 {
     font-family: 'Courgette', sans-serif;
     text-align: center; /* Center the text horizontally */
-    padding-top: 10rem;
+    padding-top: 6rem;
     color: var(--fourth-color);
 }
 
@@ -55,7 +55,7 @@ h3 {
 .p {
     font-family: sans-serif;
     text-align: center; /* Center the text horizontally */
-    padding-top: 1rem; /* Adjusted the padding-top for spacing */
+    padding-top: 1rem; /*Adjusted the padding-top for spacing */
     color: var(--fourth-color);
 }
 
@@ -116,15 +116,12 @@ h3 {
 
 
 footer {
-    width: auto;
     color: var(--second-color);
     text-align: center;
     background-image: url('asset/footerbg.png');
-    background: linear-gradient(to bottom,  rgb(245, 187, 145)) 30%,  rgb(213, 211, 204) 200%;
     padding: 1.5rem;
     overflow: hidden;
     border: none;
-        
 }
 
 .contact {
